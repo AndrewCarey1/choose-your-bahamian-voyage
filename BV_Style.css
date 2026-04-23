@@ -5,7 +5,6 @@ body {
     color: white;
 }
 
-/* HERO BACKGROUND */
 .hero-bg {
     position: fixed;
     width: 100%;
@@ -20,7 +19,6 @@ body {
     transition: opacity 1.5s ease-in-out;
 }
 
-/* DARK OVERLAY */
 .overlay {
     position: fixed;
     width: 100%;
@@ -29,13 +27,11 @@ body {
     z-index: -1;
 }
 
-/* CENTER CONTENT */
 .container {
     text-align: center;
     padding-top: 80px;
 }
 
-/* TITLE */
 h1 {
     font-size: 48px;
     margin-bottom: 10px;
@@ -56,13 +52,11 @@ h1 {
     100% { transform: translateY(0px); }
 }
 
-/* SUBTITLE */
 .subtitle {
     font-size: 20px;
     margin-bottom: 40px;
 }
 
-/* CARD (MAIN BOX) */
 .card {
     background: rgba(255,255,255,0.1);
     backdrop-filter: blur(10px);
@@ -72,13 +66,11 @@ h1 {
     margin: auto;
 }
 
-/* STORY TEXT */
 #story-text {
     font-size: 18px;
     margin-bottom: 20px;
 }
 
-/* BUTTONS */
 button {
     display: block;
     margin: 10px auto;
@@ -96,13 +88,11 @@ button:hover {
     background-color: #e65c50;
 }
 
-/* RESTART BUTTON */
 #restart-btn {
     background-color: #005f73;
     margin-top: 20px;
 }
 
-/* GALLERY LAYOUT */
 .gallery {
     display: flex;
     justify-content: center;
@@ -111,19 +101,16 @@ button:hover {
     flex-wrap: wrap;
 }
 
-/* EACH IMAGE BLOCK */
 .gallery-item {
     width: 200px;
     text-align: center;
 }
 
-/* IMAGES */
 .gallery-item img {
     width: 100%;
     border-radius: 10px;
 }
 
-/* TEXT BELOW IMAGES */
 .gallery-item p {
     margin-top: 8px;
     font-size: 14px;

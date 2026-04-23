@@ -1,10 +1,3 @@
-/*
-This object stores ALL scenes of the adventure.
-Each "scene" has:
-- text: what appears on screen
-- choices: buttons the user can click
-*/
-
 const story = {
 
     start: {
@@ -15,10 +8,6 @@ const story = {
             { text: "Culture Voyage", next: "culture" }
         ]
     },
-
-    /* =======================
-       NATURE VOYAGE
-    ======================== */
 
     nature: {
         text: "You chose Nature Voyage. What interests you most?",
@@ -84,10 +73,6 @@ const story = {
         choices: []
     },
 
-    /* =======================
-       CUISINE VOYAGE
-    ======================== */
-
     cuisine: {
         text: "Taste the Islands! You chose Cuisine Voyage. Where will you eat?",
         choices: [
@@ -151,10 +136,6 @@ const story = {
         ],
         choices: []
     },
-
-    /* =======================
-       CULTURE VOYAGE
-    ======================== */
 
     culture: {
         text: "You chose Culture Voyage. What would you like to explore?",
@@ -221,8 +202,6 @@ const story = {
     }
 };
 
-/* HERO SLIDESHOW */
-
 const heroImages = [
     "Images/slide1.jpg",
     "Images/slide2.jpg",
@@ -249,16 +228,13 @@ let currentTrack = 0;
 
 const audio = document.getElementById("bg-music");
 
-// Load first song
 function loadTrack(index) {
     audio.src = playlist[index];
     audio.play().catch(() => {
-        // autoplay might be blocked until user interacts
         console.log("Autoplay blocked - waiting for user interaction");
     });
 }
 
-// Play next song automatically
 audio.addEventListener("ended", () => {
     currentTrack = (currentTrack + 1) % playlist.length;
     loadTrack(currentTrack);
@@ -269,7 +245,6 @@ function startMusic() {
     document.removeEventListener("click", startMusic);
 }
 
-// Start music after first user interaction
 document.addEventListener("click", startMusic);
 
 function toggleMusic() {
@@ -299,17 +274,12 @@ function startHeroSlideshow() {
     }, 4000);
 }
 
-/*
-This function displays a scene on the screen
-*/
 function showScene(sceneKey) {
 
     const scene = story[sceneKey];
 
-    // Show text
     document.getElementById("story-text").innerText = scene.text;
 
-    // ===== HANDLE GALLERY =====
     const imageDiv = document.getElementById("scene-image");
     imageDiv.innerHTML = "";
 
@@ -337,7 +307,6 @@ function showScene(sceneKey) {
         imageDiv.appendChild(galleryContainer);
     }
 
-    // ===== BUTTONS =====
     const choicesDiv = document.getElementById("choices");
     choicesDiv.innerHTML = "";
 
@@ -349,15 +318,9 @@ function showScene(sceneKey) {
     });
 }
 
-
-/*
-This function starts the game from the beginning
-*/
 function startGame() {
     showScene("start");
 }
 
-
-// Start automatically when page loads
 startGame();
 startHeroSlideshow();
