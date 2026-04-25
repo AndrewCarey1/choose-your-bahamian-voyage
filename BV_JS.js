@@ -56,9 +56,9 @@ const story = {
     plants: {
         text: "You Discover the Indigenous Flowers of The Bahamas.",
         gallery: [
-            { src: "flora1.jpg", caption: "The native Pink Hibuscus flower." },
-            { src: "flora2.jpg", caption: "The National Flower: The Yellow Elder Flower." },
-            { src: "flora3.jpg", caption: "Flora found across the islands." }
+            { src: "flora1.JPG", caption: "The native Pink Hibuscus flower." },
+            { src: "flora2.JPG", caption: "The National Flower: The Yellow Elder Flower." },
+            { src: "flora3.JPG", caption: "Flora found across the islands." }
         ],
         choices: []
     },
@@ -203,10 +203,10 @@ const story = {
 };
 
 const heroImages = [
-    "Images/slide1.jpg",
+    "Images/slide1.JPG",
     "Images/slide2.jpg",
-    "Images/slide3.jpg",
-    "Images/slide4.jpg",
+    "Images/slide3.JPG",
+    "Images/slide4.JPG",
 	"Images/slide5.jpg",
 	"Images/slide6.jpg",
 	"Images/slide7.jpg",
