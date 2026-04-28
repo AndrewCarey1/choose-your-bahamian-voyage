@@ -218,9 +218,9 @@ const heroImages = [
 ];
 
 const playlist = [
-    "Audio/song3.mp3",
     "Audio/song1.mp3",
     "Audio/song2.mp3",
+    "Audio/song3.mp3",
     "Audio/song4.mp3"
 ];
 
