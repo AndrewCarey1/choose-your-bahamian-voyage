@@ -240,7 +240,6 @@ audio.addEventListener("ended", () => {
     loadTrack(currentTrack);
 });
 
-
 function startMusic() {
     loadTrack(currentTrack);
     document.removeEventListener("click", startMusic);
