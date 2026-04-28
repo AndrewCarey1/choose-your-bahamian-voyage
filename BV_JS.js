@@ -218,9 +218,9 @@ const heroImages = [
 ];
 
 const playlist = [
+    "Audio/song3.mp3",
     "Audio/song1.mp3",
     "Audio/song2.mp3",
-    "Audio/song3.mp3",
     "Audio/song4.mp3"
 ];
 
@@ -240,26 +240,6 @@ audio.addEventListener("ended", () => {
     loadTrack(currentTrack);
 });
 
-const bgMusic = document.getElementById("bg-music");
-const playlist = [
-    "Audio/song1.mp3",
-    "Audio/song2.mp3",
-    "Audio/song4.mp3"
-];
-let currentTrack = 0;
-
-function loadTrack(index) {
-    currentTrack = index % playlist.length;
-    bgMusic.src = playlist[currentTrack];
-    bgMusic.play();
-}
-
-function skipTrack() {
-    currentTrack = (currentTrack + 1) % playlist.length;
-    loadTrack(currentTrack);
-}
-
-bgMusic.addEventListener("ended", skipTrack);
 
 function startMusic() {
     loadTrack(currentTrack);
