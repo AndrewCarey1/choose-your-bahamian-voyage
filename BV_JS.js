@@ -242,9 +242,9 @@ audio.addEventListener("ended", () => {
 
 const bgMusic = document.getElementById("bg-music");
 const playlist = [
-    "Audio/junkanoo1.mp3",
-    "Audio/junkanoo2.mp3",
-    "Audio/junkanoo3.mp3"
+    "Audio/song1.mp3",
+    "Audio/song2.mp3",
+    "Audio/song4.mp3"
 ];
 let currentTrack = 0;
 
