@@ -240,6 +240,27 @@ audio.addEventListener("ended", () => {
     loadTrack(currentTrack);
 });
 
+const bgMusic = document.getElementById("bg-music");
+const playlist = [
+    "Audio/junkanoo1.mp3",
+    "Audio/junkanoo2.mp3",
+    "Audio/junkanoo3.mp3"
+];
+let currentTrack = 0;
+
+function loadTrack(index) {
+    currentTrack = index % playlist.length;
+    bgMusic.src = playlist[currentTrack];
+    bgMusic.play();
+}
+
+function skipTrack() {
+    currentTrack = (currentTrack + 1) % playlist.length;
+    loadTrack(currentTrack);
+}
+
+bgMusic.addEventListener("ended", skipTrack);
+
 function startMusic() {
     loadTrack(currentTrack);
     document.removeEventListener("click", startMusic);
